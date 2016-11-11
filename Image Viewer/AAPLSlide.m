@@ -8,28 +8,31 @@
 
 #import "AAPLSlide.h"
 #import "AAPLSlideTableBackgroundView.h"
-/*#import "AAPLImageFile.h"
-#import "AAPLSlideCarrierView.h"
+#import "AAPLImageFile.h"
+/*#import "AAPLSlideCarrierView.h"
 #import "AAPLSlideLayout.h"*/
 #import <QuartzCore/QuartzCore.h>
 
 @implementation AAPLSlide
 
 #pragma mark Selection and Highlighting Support
-/*
+
 - (void)setHighlightState:(NSCollectionViewItemHighlightState)newHighlightState {
     [super setHighlightState:newHighlightState];
     
     // Relay the newHighlightState to our AAPLSlideCarrierView.
-    [(AAPLSlideCarrierView *)[self view] setHighlightState:newHighlightState];
+    //[(AAPLSlideCarrierView *)[self view] setHighlightState:newHighlightState];
+  //view.layer?.borderWidth = selected ? 5.0 : 0.0
+    self.view.layer.borderWidth = (self.isSelected)? 5.0 : 0.0;
 }
 
+/*
 - (void)setSelected:(BOOL)selected {
     [super setSelected:selected];
 
     // Relay the new "selected" state to our AAPLSlideCarrierView.
     [(AAPLSlideCarrierView *)[self view] setSelected:selected];
-}
+}*/
 
 
 #pragma mark Represented Object
@@ -37,13 +40,13 @@
 - (AAPLImageFile *)imageFile {
     return (AAPLImageFile *)(self.representedObject);
 }
-*/
+
 // We set a Slide's representedObject to point to the AAPLImageFile it stands for.  If you aren't using Bindings to provide the desired content for your item's views, an override of -setRepresentedObject: is a handy place to manually set such content when the model object (AAPLImageFile) is first associated with the item (AAPLSlide).  (Another good place to do that is in the -collectionView:willDisplayItem:forRepresentedObjectAtIndexPath: delegate method, depending how your like to factor your code.)  Our project uses Bindings to populate a Slide's imageView and NSTextFields, but we do use -setRepresentedObject: as an opportunity to request asynchronous loading of the ImageFile's previewImage.  When the previewImage has finished loading on a background thread, the AAPLImageFile will get a -setPreviewImage: message, scheduled for delivery on the main thread.  The Slide's imageView, whose content is bound to our representedObject's previewImage property, will then automatically show the loaded preview image.
 - (void)setRepresentedObject:(id)newRepresentedObject {
     [super setRepresentedObject:newRepresentedObject];
 
     // Request loading of the ImageFile's previewImage.
-   // [self.imageFile requestPreviewImage];
+    [self.imageFile requestPreviewImage];
 }
 
 
@@ -133,7 +136,7 @@
 - (void)viewDidLoad {
   self.view.wantsLayer = YES;
   self.view.layer.backgroundColor = [NSColor lightGrayColor].CGColor;
-  [self.imageView setImage:[NSImage imageNamed:@"64x64"]];
+ // [self.imageView setImage:[NSImage imageNamed:@"64x64"]];
 }
 
 @end

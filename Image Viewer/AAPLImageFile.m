@@ -72,8 +72,6 @@
     self = [super init];
     if (self) {
         self.url = newURL;
-
-        // Get properties that we can obtain from the URL.
         id value;
         NSError *error;
         if ([self.url getResourceValue:&value forKey:NSURLTypeIdentifierKey error:&error]) {
@@ -89,7 +87,6 @@
             self.tagNames = (NSArray *)value;
         }
         if (self.tagNames == nil) {
-            // For Demo purposes, since the image files in "/Library/Desktop Pictures" don't have tags assigned to them, hardwire tagNames of our own.
             self.tagNames = [[self class] demoTagNamesForImageFileURL:self.url];
         }
     }

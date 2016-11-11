@@ -26,8 +26,6 @@
     NSMutableArray *tags;                   // a flat, alphabetical list of the collection's Tags
     NSMutableDictionary *tagsByName;        // an NSString -> AAPLTag lookup table
 }
-- (id)initWithRootURL:(NSURL *)newRootURL;
-
 
 #pragma mark Properties
 

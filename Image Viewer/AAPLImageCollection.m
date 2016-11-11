@@ -7,19 +7,16 @@
 */
 
 #import "AAPLImageCollection.h"
-//#import "AAPLImageFile.h"
-//#import "AAPLTag.h"
-//#import "AAPLFileTreeWatcherThread.h"
+#import "AAPLImageFile.h"
 
 NSString *imageFilesKey = @"imageFiles";
 
 @implementation AAPLImageCollection
 
-- (id)initWithRootURL:(NSURL *)newRootURL {
+- (id)initWithRootURL {
     
     self = [super init];
     if (self) {
-        rootURL = [newRootURL copy];
         imageFiles = [[NSMutableArray alloc] init];
         imageFilesByURL = [[NSMutableDictionary alloc] init];
         untaggedImageFiles = [[NSMutableArray alloc] init];
@@ -65,29 +62,6 @@ NSString *imageFilesKey = @"imageFiles";
 }
 
 - (void)insertImageFile:(AAPLImageFile *)imageFile atIndex:(NSUInteger)index {
-    
-    // Add and update tags, based on the imageFile's tagNames.
-    /*NSArray *tagNames = imageFile.tagNames;
-    if (tagNames.count > 0) {
-        for (NSString *tagName in imageFile.tagNames) {
-            AAPLTag *tag = [self tagWithName:tagName];
-            if (tag == nil) {
-                tag = [self addTagWithName:tagName];
-            }
-            [tag insertImageFile:imageFile];
-        }
-    } else {
-        // ImageFile has no tags, so add it to "untaggedImageFiles" instead.
-        NSUInteger insertionIndex = [untaggedImageFiles indexOfObject:imageFile inSortedRange:NSMakeRange(0, untaggedImageFiles.count) options:NSBinarySearchingInsertionIndex usingComparator:^NSComparisonResult(AAPLImageFile *imageFile1, AAPLImageFile *imageFile2) {
-            return [imageFile1.filenameWithoutExtension caseInsensitiveCompare:imageFile2.filenameWithoutExtension];
-        }];
-        if (insertionIndex == NSNotFound) {
-            NSLog(@"Failed to find insertion index for untaggedImageFiles");
-        } else {
-            [untaggedImageFiles insertObject:imageFile atIndex:insertionIndex];
-        }
-    }
-    
     // Insert the imageFile into our "imageFiles" array (in a KVO-compliant way).
     [[self mutableArrayValueForKey:imageFilesKey] insertObject:imageFile atIndex:index];
 
@@ -96,20 +70,11 @@ NSString *imageFilesKey = @"imageFiles";
 }
 
 - (void)removeImageFile:(AAPLImageFile *)imageFile {
-
     // Remove the imageFile from our "imageFiles" array (in a KVO-compliant way).
     [[self mutableArrayValueForKey:imageFilesKey] removeObject:imageFile];
 
     // Remove the imageFile from our "imageFilesByURL" dictionary.
     [imageFilesByURL removeObjectForKey:imageFile.url];
-
-    // Remove the imageFile from the "imageFiles" arrays of its AAPLTags (if any).
-    for (NSString *tagName in imageFile.tagNames) {
-        AAPLTag *tag = [self tagWithName:tagName];
-        if (tag) {
-            [[tag mutableArrayValueForKey:@"imageFiles"] removeObject:imageFile];
-        }
-    }*/
 }
 
 - (void)removeImageFileAtIndex:(NSUInteger)index {
