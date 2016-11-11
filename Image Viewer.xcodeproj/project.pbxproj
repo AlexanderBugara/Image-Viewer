@@ -10,7 +10,16 @@
 		1147D3741DD542F4003B840B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3731DD542F4003B840B /* AppDelegate.m */; };
 		1147D3771DD542F4003B840B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3761DD542F4003B840B /* main.m */; };
 		1147D3791DD542F4003B840B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1147D3781DD542F4003B840B /* Assets.xcassets */; };
-		1147D37C1DD542F4003B840B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147D37A1DD542F4003B840B /* MainMenu.xib */; };
+		1147D3841DD5432F003B840B /* BrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147D3831DD5432F003B840B /* BrowserWindow.xib */; };
+		1147D3871DD5434B003B840B /* AAPLBrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3861DD5434B003B840B /* AAPLBrowserWindowController.m */; };
+		1147D38C1DD547BA003B840B /* AAPLSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D38B1DD547BA003B840B /* AAPLSlide.m */; };
+		1147D38F1DD54D9B003B840B /* AAPLImageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D38E1DD54D9B003B840B /* AAPLImageCollection.m */; };
+		1147D3931DD5588E003B840B /* bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 1147D3921DD5588E003B840B /* bird.png */; };
+		1147D3961DD558FE003B840B /* AAPLImageFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3951DD558FE003B840B /* AAPLImageFile.m */; };
+		1147D3991DD55C12003B840B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147D3981DD55C12003B840B /* MainMenu.xib */; };
+		1147D39B1DD5614A003B840B /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147D39A1DD56149003B840B /* Slide.xib */; };
+		1147D39E1DD563AA003B840B /* AAPLSlideTableBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D39D1DD563AA003B840B /* AAPLSlideTableBackgroundView.m */; };
+		1147D3A01DD56B5A003B840B /* 64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 1147D39F1DD56B5A003B840B /* 64x64.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,8 +28,22 @@
 		1147D3731DD542F4003B840B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1147D3761DD542F4003B840B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1147D3781DD542F4003B840B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1147D37B1DD542F4003B840B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1147D37D1DD542F4003B840B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1147D3831DD5432F003B840B /* BrowserWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowserWindow.xib; sourceTree = "<group>"; };
+		1147D3851DD5434B003B840B /* AAPLBrowserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLBrowserWindowController.h; sourceTree = "<group>"; };
+		1147D3861DD5434B003B840B /* AAPLBrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLBrowserWindowController.m; sourceTree = "<group>"; };
+		1147D38A1DD547BA003B840B /* AAPLSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLSlide.h; sourceTree = "<group>"; };
+		1147D38B1DD547BA003B840B /* AAPLSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLSlide.m; sourceTree = "<group>"; };
+		1147D38D1DD54D9B003B840B /* AAPLImageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLImageCollection.h; sourceTree = "<group>"; };
+		1147D38E1DD54D9B003B840B /* AAPLImageCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLImageCollection.m; sourceTree = "<group>"; };
+		1147D3921DD5588E003B840B /* bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird.png; sourceTree = "<group>"; };
+		1147D3941DD558FE003B840B /* AAPLImageFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLImageFile.h; sourceTree = "<group>"; };
+		1147D3951DD558FE003B840B /* AAPLImageFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLImageFile.m; sourceTree = "<group>"; };
+		1147D3971DD55C12003B840B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1147D39A1DD56149003B840B /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		1147D39C1DD563AA003B840B /* AAPLSlideTableBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLSlideTableBackgroundView.h; sourceTree = "<group>"; };
+		1147D39D1DD563AA003B840B /* AAPLSlideTableBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLSlideTableBackgroundView.m; sourceTree = "<group>"; };
+		1147D39F1DD56B5A003B840B /* 64x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 64x64.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +76,24 @@
 		1147D3711DD542F4003B840B /* Image Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				1147D39F1DD56B5A003B840B /* 64x64.png */,
+				1147D39C1DD563AA003B840B /* AAPLSlideTableBackgroundView.h */,
+				1147D39D1DD563AA003B840B /* AAPLSlideTableBackgroundView.m */,
+				1147D3921DD5588E003B840B /* bird.png */,
+				1147D3851DD5434B003B840B /* AAPLBrowserWindowController.h */,
+				1147D3861DD5434B003B840B /* AAPLBrowserWindowController.m */,
+				1147D38A1DD547BA003B840B /* AAPLSlide.h */,
+				1147D38B1DD547BA003B840B /* AAPLSlide.m */,
 				1147D3721DD542F4003B840B /* AppDelegate.h */,
 				1147D3731DD542F4003B840B /* AppDelegate.m */,
+				1147D38D1DD54D9B003B840B /* AAPLImageCollection.h */,
+				1147D38E1DD54D9B003B840B /* AAPLImageCollection.m */,
+				1147D3941DD558FE003B840B /* AAPLImageFile.h */,
+				1147D3951DD558FE003B840B /* AAPLImageFile.m */,
 				1147D3781DD542F4003B840B /* Assets.xcassets */,
-				1147D37A1DD542F4003B840B /* MainMenu.xib */,
+				1147D3831DD5432F003B840B /* BrowserWindow.xib */,
+				1147D3981DD55C12003B840B /* MainMenu.xib */,
+				1147D39A1DD56149003B840B /* Slide.xib */,
 				1147D37D1DD542F4003B840B /* Info.plist */,
 				1147D3751DD542F4003B840B /* Supporting Files */,
 			);
@@ -130,8 +167,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1147D39B1DD5614A003B840B /* Slide.xib in Resources */,
+				1147D3931DD5588E003B840B /* bird.png in Resources */,
+				1147D3991DD55C12003B840B /* MainMenu.xib in Resources */,
+				1147D3841DD5432F003B840B /* BrowserWindow.xib in Resources */,
+				1147D3A01DD56B5A003B840B /* 64x64.png in Resources */,
 				1147D3791DD542F4003B840B /* Assets.xcassets in Resources */,
-				1147D37C1DD542F4003B840B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,20 +184,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				1147D3771DD542F4003B840B /* main.m in Sources */,
+				1147D38C1DD547BA003B840B /* AAPLSlide.m in Sources */,
+				1147D38F1DD54D9B003B840B /* AAPLImageCollection.m in Sources */,
+				1147D3871DD5434B003B840B /* AAPLBrowserWindowController.m in Sources */,
+				1147D39E1DD563AA003B840B /* AAPLSlideTableBackgroundView.m in Sources */,
 				1147D3741DD542F4003B840B /* AppDelegate.m in Sources */,
+				1147D3961DD558FE003B840B /* AAPLImageFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1147D37A1DD542F4003B840B /* MainMenu.xib */ = {
+		1147D3981DD55C12003B840B /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1147D37B1DD542F4003B840B /* Base */,
+				1147D3971DD55C12003B840B /* English */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
+			path = /Users/Alexander/Downloads/CocoaSlideCollectionUsingNSCollectionViewonOSX10.11/CocoaSlideCollection/English.lproj/..;
+			sourceTree = "<absolute>";
 		};
 /* End PBXVariantGroup section */
 
