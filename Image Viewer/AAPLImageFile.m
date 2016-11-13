@@ -140,7 +140,7 @@
   NSInteger imageHeight = [self pixelsHigh];
   
   CGFloat ratio = height/imageHeight;
-  CGFloat slideWidth = imageWidth * ratio;
+  NSInteger slideWidth = (NSInteger)(imageWidth * ratio);
   
   NSSize size;
   size.height = height;
