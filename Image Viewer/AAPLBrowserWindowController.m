@@ -9,6 +9,8 @@
 #import "AAPLBrowserWindowController.h"
 #import "AAPLImageCollection.h"
 #import "AAPLImageFile.h"
+#import "AAPLSlide.h"
+#import "IVCollectionViewFlowLayout.h"
 
 #define HEADER_VIEW_HEIGHT  39
 #define FOOTER_VIEW_HEIGHT  28
@@ -19,7 +21,7 @@ static NSString *tagsKey = @"tags";
 static NSString *StringFromCollectionViewDropOperation(NSCollectionViewDropOperation dropOperation);
 static NSString *StringFromCollectionViewIndexPath(NSIndexPath *indexPath);
 
-@interface AAPLBrowserWindowController (Internals)
+@interface AAPLBrowserWindowController (Internals) <IVLayoutDataSource>
 
 - (void)showStatus:(NSString *)statusMessage;
 
@@ -302,37 +304,39 @@ static NSString *StringFromCollectionViewIndexPath(NSIndexPath *indexPath);
 }
 
 - (void)windowDidLoad {
-  
-  // Set the window's title to the name of the folder we're browsing.
-/*  self.window.title = rootURL.lastPathComponent;
-  
-  // Set imageCollectionView.collectionViewLayout to match our desired layoutKind.
-  [self updateLayout];
-  
-  // Give the CollectionView a backgroundView.  The CollectionView will insert this view behind its enclosing NSClipView, and automatically size it to always match the NSClipView's frame, producing a background that remains stationary as the content scrolls.
-  NSView *backgroundView = [[AAPLSlideTableBackgroundView alloc] initWithFrame:NSMakeRect(0, 0, 100, 100)];
-  self.imageCollectionView.backgroundView = backgroundView;
-  
-  // Watch for changes to the CollectionView's selection, just so we can update our status display.
-  [imageCollectionView addObserver:self forKeyPath:selectionIndexPathsKey options:0 context:NULL];
-  
-  // Start scanning our assigned folder for image files.
-  [imageCollection startOrRestartFileTreeScan];*/
-  
-  // Configure our CollectionView for drag-and-drop.
+  [(IVCollectionViewFlowLayout *)self.imageCollectionView.collectionViewLayout setDataSource:self];
   [self registerForCollectionViewDragAndDrop];
 }
 
-- (NSSize)collectionView:(NSCollectionView *)collectionView
-                  layout:(NSCollectionViewLayout *)collectionViewLayout
-  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-  NSSize size;
-  size.width = 50;
-  size.height = collectionView.frame.size.height;
-  return size;
+- (NSSize)collctionViewFlowLayoutItemFrame:(IVCollectionViewFlowLayout *)flowLayout
+                                 indexPath:(NSIndexPath *)indexPath {
+  
+  AAPLImageFile *imageFile = [self imageFileAtIndexPath:indexPath];
+  return [imageFile proportionalSizeForHeight:self.imageCollectionView.frame.size.height];
+  
 }
 
-
+- (NSSize)collctionViewFlowLayoutContentSize:(IVCollectionViewFlowLayout *)flowLayout {
+  
+  NSSize result;
+  result.height = 0.0f;
+  result.width = 0.0f;
+  
+  for (AAPLImageFile *file in imageCollection.imageFiles) {
+    NSSize size = [file proportionalSizeForHeight:self.imageCollectionView.frame.size.height];
+    result.width += size.width;
+    result.height = size.height;
+  }
+  
+  return result;
+}
+/*
+- (NSSize)collctionViewFlowLayoutContentSize:(IVCollectionViewFlowLayout *)flowLayout {
+  NSSize result;
+  result.height = 190;
+  result.width = 100000;
+  return result;
+}*/
 @end
 
 static NSString *StringFromCollectionViewDropOperation(NSCollectionViewDropOperation dropOperation) {

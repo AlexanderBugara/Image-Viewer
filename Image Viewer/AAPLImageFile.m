@@ -135,6 +135,19 @@
     return [[imageProperties valueForKey:(NSString *)kCGImagePropertyPixelHeight] intValue];
 }
 
+- (CGSize)proportionalSizeForHeight:(CGFloat)height {
+  NSInteger imageWidth = [self pixelsWide];
+  NSInteger imageHeight = [self pixelsHigh];
+  
+  CGFloat ratio = height/imageHeight;
+  CGFloat slideWidth = imageWidth * ratio;
+  
+  NSSize size;
+  size.height = height;
+  size.width = slideWidth;
+  return size;
+}
+
 @synthesize previewImage;
 
 

@@ -9,8 +9,6 @@
 #import "AAPLSlide.h"
 #import "AAPLSlideTableBackgroundView.h"
 #import "AAPLImageFile.h"
-/*#import "AAPLSlideCarrierView.h"
-#import "AAPLSlideLayout.h"*/
 #import <QuartzCore/QuartzCore.h>
 
 @implementation AAPLSlide
@@ -55,7 +53,7 @@
 // When a slide is double-clicked, open the image file.
 - (void)mouseDown:(NSEvent *)theEvent {
     if ([theEvent clickCount] == 2) {
-        [self openImageFile:self];
+        //[self openImageFile:self];
     } else {
         [super mouseDown:theEvent];
     }
@@ -77,21 +75,9 @@
     NSView *backgroundView = self.collectionView.backgroundView;
     return [backgroundView isKindOfClass:[AAPLSlideTableBackgroundView class]] ? (AAPLSlideTableBackgroundView *)backgroundView : nil;
 }
-/*
-// Set the image as the CollectionView's background (using the "backgroundView" property).
-- (IBAction)setCollectionViewBackground:(id)sender {
-    self.slideTableBackgroundView.image = [[NSImage alloc] initByReferencingURL:self.imageFile.url];
-}*/
 
-// Clear the CollectionView's background back to its default appearance.
-/*- (IBAction)clearCollectionViewBackground:(id)sender {
-    self.slideTableBackgroundView.image = nil;
-}
-*/
 
 #pragma mark Drag and Drop Support
-
-// Override NSCollectionViewItem's -draggingImageComponents getter to return a snapshot of the entire slide as its dragging image.
 - (NSArray *)draggingImageComponents {
     
     // Image itemRootView.
@@ -136,7 +122,6 @@
 - (void)viewDidLoad {
   self.view.wantsLayer = YES;
   self.view.layer.backgroundColor = [NSColor lightGrayColor].CGColor;
- // [self.imageView setImage:[NSImage imageNamed:@"64x64"]];
 }
 
 @end

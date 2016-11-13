@@ -15,10 +15,10 @@
 		1147D38C1DD547BA003B840B /* AAPLSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D38B1DD547BA003B840B /* AAPLSlide.m */; };
 		1147D38F1DD54D9B003B840B /* AAPLImageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D38E1DD54D9B003B840B /* AAPLImageCollection.m */; };
 		1147D3961DD558FE003B840B /* AAPLImageFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3951DD558FE003B840B /* AAPLImageFile.m */; };
-		1147D3991DD55C12003B840B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147D3981DD55C12003B840B /* MainMenu.xib */; };
 		1147D39B1DD5614A003B840B /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147D39A1DD56149003B840B /* Slide.xib */; };
 		1147D39E1DD563AA003B840B /* AAPLSlideTableBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D39D1DD563AA003B840B /* AAPLSlideTableBackgroundView.m */; };
 		1147D3A31DD67F5B003B840B /* IVCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3A21DD67F5B003B840B /* IVCollectionViewFlowLayout.m */; };
+		1147D3A51DD6E2E7003B840B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147D3A41DD6E2E7003B840B /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,12 +37,12 @@
 		1147D38E1DD54D9B003B840B /* AAPLImageCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLImageCollection.m; sourceTree = "<group>"; };
 		1147D3941DD558FE003B840B /* AAPLImageFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLImageFile.h; sourceTree = "<group>"; };
 		1147D3951DD558FE003B840B /* AAPLImageFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLImageFile.m; sourceTree = "<group>"; };
-		1147D3971DD55C12003B840B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1147D39A1DD56149003B840B /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		1147D39C1DD563AA003B840B /* AAPLSlideTableBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLSlideTableBackgroundView.h; sourceTree = "<group>"; };
 		1147D39D1DD563AA003B840B /* AAPLSlideTableBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLSlideTableBackgroundView.m; sourceTree = "<group>"; };
 		1147D3A11DD67F5B003B840B /* IVCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		1147D3A21DD67F5B003B840B /* IVCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		1147D3A41DD6E2E7003B840B /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,8 @@
 				1147D3951DD558FE003B840B /* AAPLImageFile.m */,
 				1147D3781DD542F4003B840B /* Assets.xcassets */,
 				1147D3831DD5432F003B840B /* BrowserWindow.xib */,
-				1147D3981DD55C12003B840B /* MainMenu.xib */,
 				1147D39A1DD56149003B840B /* Slide.xib */,
+				1147D3A41DD6E2E7003B840B /* MainMenu.xib */,
 				1147D37D1DD542F4003B840B /* Info.plist */,
 				1147D3751DD542F4003B840B /* Supporting Files */,
 				1147D3A11DD67F5B003B840B /* IVCollectionViewFlowLayout.h */,
@@ -167,9 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1147D39B1DD5614A003B840B /* Slide.xib in Resources */,
-				1147D3991DD55C12003B840B /* MainMenu.xib in Resources */,
 				1147D3841DD5432F003B840B /* BrowserWindow.xib in Resources */,
 				1147D3791DD542F4003B840B /* Assets.xcassets in Resources */,
+				1147D3A51DD6E2E7003B840B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,18 +192,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		1147D3981DD55C12003B840B /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1147D3971DD55C12003B840B /* English */,
-			);
-			name = MainMenu.xib;
-			path = /Users/Alexander/Downloads/CocoaSlideCollectionUsingNSCollectionViewonOSX10.11/CocoaSlideCollection/English.lproj/..;
-			sourceTree = "<absolute>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1147D37E1DD542F4003B840B /* Debug */ = {

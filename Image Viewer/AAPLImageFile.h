@@ -38,7 +38,7 @@
 @property(readonly) NSInteger pixelsHigh;
 
 @property(strong) NSImage *previewImage;
-
+- (CGSize)proportionalSizeForHeight:(CGFloat)height;
 
 #pragma mark Loading
 
