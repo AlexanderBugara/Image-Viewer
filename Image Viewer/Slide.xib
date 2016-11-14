@@ -14,7 +14,11 @@
             <subviews>
                 <imageView alphaValue="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="6">
                     <rect key="frame" x="-3" y="-3" width="146" height="146"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="photo" image="64x64" id="100006"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="photo" id="100006">
+                        <string key="image" base64-UTF8="YES">
+DQ
+</string>
+                    </imageCell>
                     <connections>
                         <binding destination="RJz-wL-WeE" name="value" keyPath="representedObject.previewImage" id="Tda-Z6-POk"/>
                     </connections>
@@ -40,30 +44,14 @@
         </collectionViewItem>
         <userDefaultsController representsSharedInstance="YES" id="Y98-5z-J4q"/>
         <menu id="yYb-52-kef">
-            <items>
-                <menuItem title="Open" id="Cem-bP-cOr">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="openImageFile:" target="RJz-wL-WeE" id="eKY-yG-T5a"/>
-                    </connections>
-                </menuItem>
-                <menuItem title="Set as Background" id="MF1-Z9-P2y">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="setCollectionViewBackground:" target="RJz-wL-WeE" id="3av-3e-fjd"/>
-                    </connections>
-                </menuItem>
-                <menuItem title="Clear Background" id="avk-jE-ASV">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="clearCollectionViewBackground:" target="RJz-wL-WeE" id="SKR-bS-G7j"/>
-                    </connections>
-                </menuItem>
-            </items>
             <point key="canvasLocation" x="-92" y="-157.5"/>
         </menu>
     </objects>
     <resources>
-        <image name="64x64" width="64" height="64"/>
+        <image width="128" height="128">
+            <string key="name" base64-UTF8="YES">
+DQ
+</string>
+        </image>
     </resources>
 </document>
