@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="AAPLBrowserWindowController">
+        <customObject id="-2" userLabel="File's Owner" customClass="IVBrowserWindowController">
             <connections>
                 <outlet property="imageCollectionView" destination="100141" id="edz-dG-FiE"/>
-                <outlet property="window" destination="5" id="9"/>
+                <outlet property="window" destination="5" id="olt-JM-VPd"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>

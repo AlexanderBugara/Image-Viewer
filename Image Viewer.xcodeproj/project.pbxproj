@@ -11,16 +11,17 @@
 		1147D3771DD542F4003B840B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3761DD542F4003B840B /* main.m */; };
 		1147D3791DD542F4003B840B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1147D3781DD542F4003B840B /* Assets.xcassets */; };
 		1147D3841DD5432F003B840B /* BrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147D3831DD5432F003B840B /* BrowserWindow.xib */; };
-		1147D3871DD5434B003B840B /* AAPLBrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3861DD5434B003B840B /* AAPLBrowserWindowController.m */; };
-		1147D38C1DD547BA003B840B /* AAPLSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D38B1DD547BA003B840B /* AAPLSlide.m */; };
-		1147D38F1DD54D9B003B840B /* AAPLImageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D38E1DD54D9B003B840B /* AAPLImageCollection.m */; };
-		1147D3961DD558FE003B840B /* AAPLImageFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3951DD558FE003B840B /* AAPLImageFile.m */; };
+		1147D3871DD5434B003B840B /* IVBrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3861DD5434B003B840B /* IVBrowserWindowController.m */; };
+		1147D38C1DD547BA003B840B /* IVSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D38B1DD547BA003B840B /* IVSlide.m */; };
+		1147D38F1DD54D9B003B840B /* IVImageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D38E1DD54D9B003B840B /* IVImageCollection.m */; };
+		1147D3961DD558FE003B840B /* IVImageFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3951DD558FE003B840B /* IVImageFile.m */; };
 		1147D39B1DD5614A003B840B /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147D39A1DD56149003B840B /* Slide.xib */; };
-		1147D39E1DD563AA003B840B /* AAPLSlideTableBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D39D1DD563AA003B840B /* AAPLSlideTableBackgroundView.m */; };
 		1147D3A31DD67F5B003B840B /* IVCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3A21DD67F5B003B840B /* IVCollectionViewFlowLayout.m */; };
 		1147D3A51DD6E2E7003B840B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147D3A41DD6E2E7003B840B /* MainMenu.xib */; };
 		1147D3A81DD8457F003B840B /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1147D3A71DD8457E003B840B /* QuickLook.framework */; };
-		1147D3AB1DD84766003B840B /* NSImage+QuickLook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3AA1DD84766003B840B /* NSImage+QuickLook.m */; };
+		1147D3AE1DD96645003B840B /* IVQuickLookThumnailRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3AD1DD96644003B840B /* IVQuickLookThumnailRender.m */; };
+		1147D3B01DD9802B003B840B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1147D3AF1DD9802B003B840B /* Cocoa.framework */; };
+		1147D3B21DD98034003B840B /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1147D3B11DD98034003B840B /* Quartz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,23 +32,23 @@
 		1147D3781DD542F4003B840B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1147D37D1DD542F4003B840B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1147D3831DD5432F003B840B /* BrowserWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowserWindow.xib; sourceTree = "<group>"; };
-		1147D3851DD5434B003B840B /* AAPLBrowserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLBrowserWindowController.h; sourceTree = "<group>"; };
-		1147D3861DD5434B003B840B /* AAPLBrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLBrowserWindowController.m; sourceTree = "<group>"; };
-		1147D38A1DD547BA003B840B /* AAPLSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLSlide.h; sourceTree = "<group>"; };
-		1147D38B1DD547BA003B840B /* AAPLSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLSlide.m; sourceTree = "<group>"; };
-		1147D38D1DD54D9B003B840B /* AAPLImageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLImageCollection.h; sourceTree = "<group>"; };
-		1147D38E1DD54D9B003B840B /* AAPLImageCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLImageCollection.m; sourceTree = "<group>"; };
-		1147D3941DD558FE003B840B /* AAPLImageFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLImageFile.h; sourceTree = "<group>"; };
-		1147D3951DD558FE003B840B /* AAPLImageFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLImageFile.m; sourceTree = "<group>"; };
+		1147D3851DD5434B003B840B /* IVBrowserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVBrowserWindowController.h; sourceTree = "<group>"; };
+		1147D3861DD5434B003B840B /* IVBrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVBrowserWindowController.m; sourceTree = "<group>"; };
+		1147D38A1DD547BA003B840B /* IVSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVSlide.h; sourceTree = "<group>"; };
+		1147D38B1DD547BA003B840B /* IVSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVSlide.m; sourceTree = "<group>"; };
+		1147D38D1DD54D9B003B840B /* IVImageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVImageCollection.h; sourceTree = "<group>"; };
+		1147D38E1DD54D9B003B840B /* IVImageCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVImageCollection.m; sourceTree = "<group>"; };
+		1147D3941DD558FE003B840B /* IVImageFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVImageFile.h; sourceTree = "<group>"; };
+		1147D3951DD558FE003B840B /* IVImageFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVImageFile.m; sourceTree = "<group>"; };
 		1147D39A1DD56149003B840B /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
-		1147D39C1DD563AA003B840B /* AAPLSlideTableBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLSlideTableBackgroundView.h; sourceTree = "<group>"; };
-		1147D39D1DD563AA003B840B /* AAPLSlideTableBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLSlideTableBackgroundView.m; sourceTree = "<group>"; };
 		1147D3A11DD67F5B003B840B /* IVCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		1147D3A21DD67F5B003B840B /* IVCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		1147D3A41DD6E2E7003B840B /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		1147D3A71DD8457E003B840B /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
-		1147D3A91DD84766003B840B /* NSImage+QuickLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+QuickLook.h"; sourceTree = "<group>"; };
-		1147D3AA1DD84766003B840B /* NSImage+QuickLook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+QuickLook.m"; sourceTree = "<group>"; };
+		1147D3AC1DD96644003B840B /* IVQuickLookThumnailRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVQuickLookThumnailRender.h; sourceTree = "<group>"; };
+		1147D3AD1DD96644003B840B /* IVQuickLookThumnailRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVQuickLookThumnailRender.m; sourceTree = "<group>"; };
+		1147D3AF1DD9802B003B840B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1147D3B11DD98034003B840B /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1147D3B21DD98034003B840B /* Quartz.framework in Frameworks */,
+				1147D3B01DD9802B003B840B /* Cocoa.framework in Frameworks */,
 				1147D3A81DD8457F003B840B /* QuickLook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,20 +85,16 @@
 		1147D3711DD542F4003B840B /* Image Viewer */ = {
 			isa = PBXGroup;
 			children = (
-				1147D3A91DD84766003B840B /* NSImage+QuickLook.h */,
-				1147D3AA1DD84766003B840B /* NSImage+QuickLook.m */,
-				1147D39C1DD563AA003B840B /* AAPLSlideTableBackgroundView.h */,
-				1147D39D1DD563AA003B840B /* AAPLSlideTableBackgroundView.m */,
-				1147D3851DD5434B003B840B /* AAPLBrowserWindowController.h */,
-				1147D3861DD5434B003B840B /* AAPLBrowserWindowController.m */,
-				1147D38A1DD547BA003B840B /* AAPLSlide.h */,
-				1147D38B1DD547BA003B840B /* AAPLSlide.m */,
+				1147D3851DD5434B003B840B /* IVBrowserWindowController.h */,
+				1147D3861DD5434B003B840B /* IVBrowserWindowController.m */,
+				1147D38A1DD547BA003B840B /* IVSlide.h */,
+				1147D38B1DD547BA003B840B /* IVSlide.m */,
 				1147D3721DD542F4003B840B /* AppDelegate.h */,
 				1147D3731DD542F4003B840B /* AppDelegate.m */,
-				1147D38D1DD54D9B003B840B /* AAPLImageCollection.h */,
-				1147D38E1DD54D9B003B840B /* AAPLImageCollection.m */,
-				1147D3941DD558FE003B840B /* AAPLImageFile.h */,
-				1147D3951DD558FE003B840B /* AAPLImageFile.m */,
+				1147D38D1DD54D9B003B840B /* IVImageCollection.h */,
+				1147D38E1DD54D9B003B840B /* IVImageCollection.m */,
+				1147D3941DD558FE003B840B /* IVImageFile.h */,
+				1147D3951DD558FE003B840B /* IVImageFile.m */,
 				1147D3781DD542F4003B840B /* Assets.xcassets */,
 				1147D3831DD5432F003B840B /* BrowserWindow.xib */,
 				1147D39A1DD56149003B840B /* Slide.xib */,
@@ -104,6 +103,8 @@
 				1147D3751DD542F4003B840B /* Supporting Files */,
 				1147D3A11DD67F5B003B840B /* IVCollectionViewFlowLayout.h */,
 				1147D3A21DD67F5B003B840B /* IVCollectionViewFlowLayout.m */,
+				1147D3AC1DD96644003B840B /* IVQuickLookThumnailRender.h */,
+				1147D3AD1DD96644003B840B /* IVQuickLookThumnailRender.m */,
 			);
 			path = "Image Viewer";
 			sourceTree = "<group>";
@@ -119,6 +120,8 @@
 		1147D3A61DD8457E003B840B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1147D3B11DD98034003B840B /* Quartz.framework */,
+				1147D3AF1DD9802B003B840B /* Cocoa.framework */,
 				1147D3A71DD8457E003B840B /* QuickLook.framework */,
 			);
 			name = Frameworks;
@@ -198,14 +201,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1147D3771DD542F4003B840B /* main.m in Sources */,
-				1147D38C1DD547BA003B840B /* AAPLSlide.m in Sources */,
-				1147D38F1DD54D9B003B840B /* AAPLImageCollection.m in Sources */,
+				1147D3AE1DD96645003B840B /* IVQuickLookThumnailRender.m in Sources */,
+				1147D38C1DD547BA003B840B /* IVSlide.m in Sources */,
+				1147D38F1DD54D9B003B840B /* IVImageCollection.m in Sources */,
 				1147D3A31DD67F5B003B840B /* IVCollectionViewFlowLayout.m in Sources */,
-				1147D3871DD5434B003B840B /* AAPLBrowserWindowController.m in Sources */,
-				1147D3AB1DD84766003B840B /* NSImage+QuickLook.m in Sources */,
-				1147D39E1DD563AA003B840B /* AAPLSlideTableBackgroundView.m in Sources */,
+				1147D3871DD5434B003B840B /* IVBrowserWindowController.m in Sources */,
 				1147D3741DD542F4003B840B /* AppDelegate.m in Sources */,
-				1147D3961DD558FE003B840B /* AAPLImageFile.m in Sources */,
+				1147D3961DD558FE003B840B /* IVImageFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

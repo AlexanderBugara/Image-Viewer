@@ -8,9 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#define X_PADDING        10.0
-#define Y_PADDING        10.0
-
 @class IVCollectionViewFlowLayout;
 
 @protocol IVLayoutDataSource <NSObject>
@@ -20,11 +17,6 @@
                                  indexPath:(NSIndexPath *)indexPath;
 @end
 
-@interface IVCollectionViewFlowLayout : NSCollectionViewFlowLayout {
-  NSPoint loopCenter;
-  NSSize loopSize;
-  NSSize itemSize;
-  NSRect box;
-}
+@interface IVCollectionViewFlowLayout : NSCollectionViewFlowLayout
 @property (nonatomic, weak) id <IVLayoutDataSource> dataSource;
 @end

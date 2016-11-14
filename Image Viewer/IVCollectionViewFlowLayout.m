@@ -7,8 +7,8 @@
 //
 
 #import "IVCollectionViewFlowLayout.h"
-#import "AAPLSlide.h"
-#import "AAPLImageFile.h"
+#import "IVSlide.h"
+#import "IVImageFile.h"
 
 @interface IVCollectionViewFlowLayout ()
 @property (assign) NSSize contentSize;
@@ -62,4 +62,5 @@
 - (NSSize)collectionViewContentSize {
   return [self.dataSource collctionViewFlowLayoutContentSize:self];
 }
+
 @end
