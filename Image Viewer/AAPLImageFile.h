@@ -43,7 +43,7 @@
 #pragma mark Loading
 
 // These are triggered automatically the first time relevant properties are requested, but can be invoked explicitly to force loading earlier.
-- (BOOL)loadMetadata;
+//- (BOOL)loadMetadata;
 
 - (void)requestPreviewImage;
 

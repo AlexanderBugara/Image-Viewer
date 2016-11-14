@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <imageView alphaValue="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="6" customClass="AAPLSlideImageView">
+                <imageView alphaValue="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="6">
                     <rect key="frame" x="-3" y="-3" width="146" height="146"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="photo" image="64x64" id="100006"/>
                     <connections>

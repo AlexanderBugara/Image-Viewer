@@ -19,6 +19,8 @@
 		1147D39E1DD563AA003B840B /* AAPLSlideTableBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D39D1DD563AA003B840B /* AAPLSlideTableBackgroundView.m */; };
 		1147D3A31DD67F5B003B840B /* IVCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3A21DD67F5B003B840B /* IVCollectionViewFlowLayout.m */; };
 		1147D3A51DD6E2E7003B840B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1147D3A41DD6E2E7003B840B /* MainMenu.xib */; };
+		1147D3A81DD8457F003B840B /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1147D3A71DD8457E003B840B /* QuickLook.framework */; };
+		1147D3AB1DD84766003B840B /* NSImage+QuickLook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1147D3AA1DD84766003B840B /* NSImage+QuickLook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,9 @@
 		1147D3A11DD67F5B003B840B /* IVCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		1147D3A21DD67F5B003B840B /* IVCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		1147D3A41DD6E2E7003B840B /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		1147D3A71DD8457E003B840B /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		1147D3A91DD84766003B840B /* NSImage+QuickLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+QuickLook.h"; sourceTree = "<group>"; };
+		1147D3AA1DD84766003B840B /* NSImage+QuickLook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+QuickLook.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1147D3A81DD8457F003B840B /* QuickLook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,7 @@
 			children = (
 				1147D3711DD542F4003B840B /* Image Viewer */,
 				1147D3701DD542F4003B840B /* Products */,
+				1147D3A61DD8457E003B840B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +82,8 @@
 		1147D3711DD542F4003B840B /* Image Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				1147D3A91DD84766003B840B /* NSImage+QuickLook.h */,
+				1147D3AA1DD84766003B840B /* NSImage+QuickLook.m */,
 				1147D39C1DD563AA003B840B /* AAPLSlideTableBackgroundView.h */,
 				1147D39D1DD563AA003B840B /* AAPLSlideTableBackgroundView.m */,
 				1147D3851DD5434B003B840B /* AAPLBrowserWindowController.h */,
@@ -105,6 +114,14 @@
 				1147D3761DD542F4003B840B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1147D3A61DD8457E003B840B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1147D3A71DD8457E003B840B /* QuickLook.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +202,7 @@
 				1147D38F1DD54D9B003B840B /* AAPLImageCollection.m in Sources */,
 				1147D3A31DD67F5B003B840B /* IVCollectionViewFlowLayout.m in Sources */,
 				1147D3871DD5434B003B840B /* AAPLBrowserWindowController.m in Sources */,
+				1147D3AB1DD84766003B840B /* NSImage+QuickLook.m in Sources */,
 				1147D39E1DD563AA003B840B /* AAPLSlideTableBackgroundView.m in Sources */,
 				1147D3741DD542F4003B840B /* AppDelegate.m in Sources */,
 				1147D3961DD558FE003B840B /* AAPLImageFile.m in Sources */,

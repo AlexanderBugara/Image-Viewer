@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import "AAPLImageFile.h"
+#import "NSImage+QuickLook.h"
+#import <QuickLook/QuickLook.h>
 
 @interface AAPLImageFile (Internals)
 + (NSOperationQueue *)previewLoadingOperationQueue;
@@ -122,15 +124,17 @@
 #pragma mark Image Properties
 
 - (NSInteger)pixelsWide {
+  return 200;
     if (imageProperties == nil) {
-        [self loadMetadata];
+     //   [self loadMetadata];
     }
     return [[imageProperties valueForKey:(NSString *)kCGImagePropertyPixelWidth] intValue];
 }
 
 - (NSInteger)pixelsHigh {
+  return 200;
     if (imageProperties == nil) {
-        [self loadMetadata];
+     //   [self loadMetadata];
     }
     return [[imageProperties valueForKey:(NSString *)kCGImagePropertyPixelHeight] intValue];
 }
@@ -166,6 +170,7 @@
         
         // Create a CGImageSource from the URL.
         imageSource = CGImageSourceCreateWithURL((CFURLRef)sourceURL, NULL);
+      
         if (imageSource == NULL) {
             return NO;
         }
@@ -177,7 +182,7 @@
     }
     return imageSource ? YES : NO;
 }
-
+/*
 - (BOOL)loadMetadata {
     if (imageProperties == NULL) {
         
@@ -196,11 +201,20 @@
     
     // Return indicating success!
     return imageProperties ? YES : NO;
-}
+}*/
 
 - (void)requestPreviewImage {
     if (self.previewImage == nil) {
-        [[[self class] previewLoadingOperationQueue] addOperationWithBlock:^{
+      
+      __weak __typeof (self) weakSelf = self;
+      
+      self.previewImage = [NSImage imageWithPreviewOfFileAtPath:[self.url path]
+                                                         ofSize:NSSizeFromCGSize(CGSizeMake(190, 190))
+                                                         asIcon:YES
+                           complition:^(NSImage *image) {
+                              weakSelf.previewImage = image;
+                           }];
+      /*  [[[self class] previewLoadingOperationQueue] addOperationWithBlock:^{
             if ([self createImageSource]) {
                 NSDictionary *options = [[NSDictionary alloc] initWithObjectsAndKeys:
                                          // Ask ImageIO to create a thumbnail from the file's image data, if it can't find
@@ -221,7 +235,7 @@
                     CGImageRelease(thumbnail);
                 }
             }
-        }];
+        }];*/
     }
 }
 
