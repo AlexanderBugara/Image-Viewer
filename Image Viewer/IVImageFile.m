@@ -20,16 +20,18 @@
 #pragma mark Image Properties
 
 - (NSInteger)pixelsWide {
-  return 200;
+  return self.previewImage.size.width;
 }
 
 - (NSInteger)pixelsHigh {
-  return 200;
+  return self.previewImage.size.height;
 }
 
 - (CGSize)proportionalSizeForHeight:(CGFloat)height {
   NSInteger imageWidth = [self pixelsWide];
   NSInteger imageHeight = [self pixelsHigh];
+  
+  if (imageWidth == 0 || imageHeight == 0) return CGSizeZero;
   
   CGFloat ratio = height/imageHeight;
   NSInteger slideWidth = (NSInteger)(imageWidth * ratio);
@@ -42,7 +44,7 @@
 
 @synthesize previewImage;
 
-- (void)requestPreviewImage {
+- (void)requestPreviewImageComplitionHandler:(void(^)(void))complitionHandler {
     if (self.previewImage == nil) {
       
       __weak __typeof (self) weakSelf = self;
@@ -51,6 +53,7 @@
                                          ofSize:NSSizeFromCGSize(CGSizeMake(190, 190))
                                      complition:^(NSImage *image) {
                                        weakSelf.previewImage = image;
+                                       complitionHandler();
                                      }];
     }
 }

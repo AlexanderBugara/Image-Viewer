@@ -13,7 +13,12 @@
 
 - (void)setRepresentedObject:(id)newRepresentedObject {
     [super setRepresentedObject:newRepresentedObject];
-    [self.imageFile requestPreviewImage];
+  
+    __weak __typeof (self) weakSelf = self;
+    [self.imageFile requestPreviewImageComplitionHandler:^{
+      NSIndexPath *indexPath = [weakSelf.collectionView indexPathForItem:self];
+      [self.collectionView reloadItemsAtIndexPaths:[NSSet setWithObject:indexPath]];
+    }];
 }
 
 - (void)viewDidLoad {

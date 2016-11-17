@@ -25,11 +25,12 @@
   __block NSImage *result = nil;
   QLThumbnailDispatchAsync(thumbnail, dispatch_get_main_queue(), ^{
     CGImageRef image = QLThumbnailCopyImage(thumbnail);
+    CGRect rect = QLThumbnailGetContentRect(thumbnail);
     if (image) {
       dispatch_async(dispatch_get_main_queue(), ^{
-        result = [[NSImage alloc] initWithCGImage:image size:size];
-        complitionHandler(result);
+        result = [[NSImage alloc] initWithCGImage:image size:rect.size];
         CGImageRelease(image);
+        complitionHandler(result);
       });
     } else {
       NSImage *icon = [[NSWorkspace sharedWorkspace] iconForFile:path];

@@ -16,5 +16,5 @@
 - (CGSize)proportionalSizeForHeight:(CGFloat)height;
 
 #pragma mark Loading
-- (void)requestPreviewImage;
+- (void)requestPreviewImageComplitionHandler:(void(^)(void))complitionHandler;
 @end
